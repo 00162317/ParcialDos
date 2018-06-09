@@ -16,34 +16,43 @@ import Razas.Usa;
  */
 public class FactoryUSA implements AbstractFactory{
 
+    /*
+    1.DisneyLand
+    2.Casa Blanca
+    3.EmpireState
+    4.Estatua Libertad
+    5.Golden State
+    6.Gran Canion
+    7.Torres Gemelas
+    */
     @Override
-    public Usa getUsa(String type) {
-        switch(type){
-            case "DisneyLand":
+    public Usa getUsa(int algo) {
+        switch(algo){
+            case 1:
                 return new DisneyLandWorker();
-            case "Casa Blanca":
+            case 2:
                 return new CasaBlancaWorker();
-            case "Empire State":
+            case 3:
                 return new EmpireStateWorker();
-            case "Estatua Libertad":
+            case 4:
                 return new EstatuaLibertadWorker();
-            case "Golden State":
+            case 5:
                 return new GoldeStateWorker();
-            case "Gran Canion":
+            case 6:
                 return new GranCanionWorker();
-            case "Torres Gemelas":
+            case 7:
                 return new TorresGemelasWorker();
         }
         return null;
     }
 
     @Override
-    public Rusia getRusia(String type) {
+    public Rusia getRusia(int algo) {
         return null;
     }
 
     @Override
-    public Alemania getAlemania(String type) {
+    public Alemania getAlemania(int algo) {
         return null;
     }
     

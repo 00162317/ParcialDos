@@ -10,7 +10,7 @@ package Razas;
  * @author Roberto
  */
 public interface AbstractFactory {
-    Usa getUsa(String type);
-    Rusia getRusia(String type);
-    Alemania getAlemania(String type);
+    Usa getUsa(int algo);
+    Rusia getRusia(int algo);
+    Alemania getAlemania(int algo);
 }

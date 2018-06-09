@@ -17,31 +17,40 @@ import Razas.Usa;
 public class FactoryAlemania implements AbstractFactory{
 
     @Override
-    public Usa getUsa(String type) {
+    public Usa getUsa(int algo) {
         return null;
     }
 
     @Override
-    public Rusia getRusia(String type) {
+    public Rusia getRusia(int algo) {
         return null;
     }
 
     @Override
-    public Alemania getAlemania(String type) {
-        switch(type){
-            case "Bemberg":
+    public Alemania getAlemania(int algo) {
+        /*
+        1.Bemberg
+        2.Brenderburgo
+        3.Dresde
+        4.Europa Park
+        5.Hamburgo
+        6.Munich
+        7.Muro Berlin
+        */
+        switch(algo){
+            case 1:
                 return new BembergWorker();
-            case "Brenderburgo":
+            case 2:
                 return new BrenderburgoWorker();
-            case "Dresde":
+            case 3:
                 return new DresdeWorker();
-            case "Europa Park":
+            case 4:
                 return new EuropaParkWorker();
-            case "Hamburgo":
+            case 5:
                 return new HamburgoWorker();
-            case "Munich":
+            case 6:
                 return new MunichWorker();
-            case "Muro Berlin":
+            case 7:
                 return new MuroBerlinWorker();
         }
         return null;

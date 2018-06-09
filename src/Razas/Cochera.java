@@ -5,6 +5,8 @@
  */
 package Razas;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Roberto
@@ -12,6 +14,8 @@ package Razas;
 public class Cochera implements CocheraPlan {
     private String nombre;
     private int vidaDefensa,capacidad,cantidad,cant,precio;
+    //Se creo una lista de tipo Cochera que guardara todos los deatos seteados y getados jaja
+    public ArrayList<Cochera> carros = new ArrayList<>();
     @Override
     public void setNombre(String nombre) {
         this.nombre=nombre;

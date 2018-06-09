@@ -5,6 +5,8 @@
  */
 package Razas;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Roberto
@@ -12,6 +14,8 @@ package Razas;
 public class Bunker implements BunkerPlan{
     private String nombre;
     private int vida, capacidad,cantidad,cant;
+    //Se creo una lista de tipo Bunker que guardara todos los deatos seteados y getados jaja
+    public ArrayList<Bunker> edif = new ArrayList<>();
     @Override
     public void setNombre(String nombre) {
         this.nombre=nombre;

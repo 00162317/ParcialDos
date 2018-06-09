@@ -1,13 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package robertohernandezworld;
 
-import EdificacionAlemania.BembergWorker;
-import EdificacionAlemania.FactoryAlemania;
-import Razas.Edificio;
+import EdificacionAlemania.*;
+import EdificacionUSA.*;
+import EdificacionesRusia.*;
+import Razas.*;
 
 /**
  *
@@ -20,11 +17,22 @@ public class RobertoHernandezWorld {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        FactoryAlemania variable = new FactoryAlemania();
-        variable.getAlemania("Bemberg").crearEdificacion();
-        Edificio edificio = BembergWorker.getInstance();
-        System.out.println("El nombre de la edificacion: "+edificio.getNombre());
-        System.out.println("La vida de la edificacion es: "+edificio.getVida());
+        FactoryAlemania alemania = new FactoryAlemania();
+        FactoryUSA unaited = new FactoryUSA();
+        FactoryRusia russian = new FactoryRusia();
+        /////////////////////////////////////////////////
+        alemania.getAlemania(1).crearEdificacion();
+        unaited.getUsa(2).crearEdificacion();
+        russian.getRusia(3).crearEdificacion();
+        //////////////////////////////////////////////////
+        Edificio edifBase = BembergWorker.getInstance();
+        edifBase.edif.add(edifBase);
+        Edificio edifUsa = CasaBlancaWorker.getInstance();
+        edifBase.edif.add(edifUsa);
+        //////////////////////////////////////////////////////
+        System.out.println("Edificacion: "+edifBase.edif.get(0).getNombre());
+        System.out.println("Edificacion: "+edifBase.edif.get(1).getNombre());
+        
     }
     
 }
