@@ -11,11 +11,11 @@ import java.util.ArrayList;
  *
  * @author Roberto
  */
-public class CentroMando implements CentroMandoPlan{
+public class CentroMando implements EdificacionesPlan{
     private String nombre;
-    private int vida, capacidad,cantidad,cant;
-    //Se creo una lista de tipo CentroMando que guardara todos los deatos seteados y getados jaja
-    public ArrayList<CentroMando> centro= new ArrayList<>();
+    private int vida,capacidad,cantidad,cant,precio;
+    //Se creo una lista de tipo Edificio que guardara todos los deatos seteados y getados jaja
+    public ArrayList<Edificio> edif = new ArrayList<>();
     @Override
     public void setNombre(String nombre) {
         this.nombre=nombre;
@@ -33,7 +33,7 @@ public class CentroMando implements CentroMandoPlan{
 
     @Override
     public void setCantidad(int cantidad) {
-       this.cantidad=cantidad;
+        this.cantidad=cantidad;
     }
 
     @Override
@@ -43,7 +43,7 @@ public class CentroMando implements CentroMandoPlan{
 
     @Override
     public String getNombre() {
-        return this.nombre;
+       return this.nombre;
     }
 
     @Override
@@ -65,4 +65,16 @@ public class CentroMando implements CentroMandoPlan{
     public int getCantxTurno() {
         return this.cant;
     }
+
+    @Override
+    public void setPrecio(int precio) {
+       this.precio=precio;
+    }
+
+
+    @Override
+    public int getPrecio() {
+        return this.precio;
+    }
+    
 }

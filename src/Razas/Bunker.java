@@ -11,11 +11,11 @@ import java.util.ArrayList;
  *
  * @author Roberto
  */
-public class Bunker implements BunkerPlan{
+public class Bunker implements EdificacionesPlan{
     private String nombre;
-    private int vida, capacidad,cantidad,cant;
-    //Se creo una lista de tipo Bunker que guardara todos los deatos seteados y getados jaja
-    public ArrayList<Bunker> edif = new ArrayList<>();
+    private int vida,capacidad,cantidad,cant,precio;
+    //Se creo una lista de tipo Edificio que guardara todos los deatos seteados y getados jaja
+    public ArrayList<Edificio> edif = new ArrayList<>();
     @Override
     public void setNombre(String nombre) {
         this.nombre=nombre;
@@ -43,7 +43,7 @@ public class Bunker implements BunkerPlan{
 
     @Override
     public String getNombre() {
-        return this.nombre;
+       return this.nombre;
     }
 
     @Override
@@ -64,6 +64,17 @@ public class Bunker implements BunkerPlan{
     @Override
     public int getCantxTurno() {
         return this.cant;
+    }
+
+    @Override
+    public void setPrecio(int precio) {
+       this.precio=precio;
+    }
+
+
+    @Override
+    public int getPrecio() {
+        return this.precio;
     }
     
 }

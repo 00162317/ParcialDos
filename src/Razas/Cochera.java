@@ -11,19 +11,19 @@ import java.util.ArrayList;
  *
  * @author Roberto
  */
-public class Cochera implements CocheraPlan {
+public class Cochera implements EdificacionesPlan{
     private String nombre;
-    private int vidaDefensa,capacidad,cantidad,cant,precio;
-    //Se creo una lista de tipo Cochera que guardara todos los deatos seteados y getados jaja
-    public ArrayList<Cochera> carros = new ArrayList<>();
+    private int vida,capacidad,cantidad,cant,precio;
+    //Se creo una lista de tipo Edificio que guardara todos los deatos seteados y getados jaja
+    public ArrayList<Edificio> edif = new ArrayList<>();
     @Override
     public void setNombre(String nombre) {
         this.nombre=nombre;
     }
 
     @Override
-    public void setVidaDefensa(int vidaDefensa) {
-        this.vidaDefensa=vidaDefensa;
+    public void setVida(int vida) {
+        this.vida=vida;
     }
 
     @Override
@@ -43,12 +43,12 @@ public class Cochera implements CocheraPlan {
 
     @Override
     public String getNombre() {
-        return this.nombre;
+       return this.nombre;
     }
 
     @Override
-    public int getVidaDefensa() {
-        return this.vidaDefensa;
+    public int getVida() {
+        return this.vida;
     }
 
     @Override
@@ -68,8 +68,9 @@ public class Cochera implements CocheraPlan {
 
     @Override
     public void setPrecio(int precio) {
-        this.precio=precio;
+       this.precio=precio;
     }
+
 
     @Override
     public int getPrecio() {

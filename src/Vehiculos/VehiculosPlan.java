@@ -3,23 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Razas;
+package Vehiculos;
 
 /**
  *
  * @author Roberto
  */
-public interface BunkerPlan {
+public interface VehiculosPlan {
     //Sets
     public void setNombre(String nombre);
     public void setVida(int vida);
-    public void setCapacidad(int capacidad);
-    public void setCantidad(int cantidad);
-    public void setCantxTurno(int cant);
+    public void setPrecio(int dinero, int dineroDos);
+    public void setAtaque(int ataque);
+    public void setTiempoHacer(int hacer);
+    public void setTiempoLlegada(int llegada);
     //Gets
     public String getNombre();
     public int getVida();
-    public int getCapacidad();
-    public int getCantidad();
-    public int getCantxTurno();
+    public int getPrecio();
+    public int getAtaque();
+    public int getTiempoHacer();
+    public int getTiempoLlegada();
 }
