@@ -5,53 +5,50 @@
  */
 package EdificacionesRusia;
 
+import Razas.Bunker;
+import Razas.CentroMando;
+import Razas.Cochera;
+import Razas.Edificio;
+import Razas.Rusia;
+
 /**
  *
  * @author Roberto
  */
-public class KremlinWorker implements Datos{
-    private Edificacion russian;
-    public static KremlinWorker russianDos;
-    private int vida = 650;
-
-    public int getVida() {
-        return vida;
-    }
-
-    public void setVida(int vida) {
-        this.vida = vida;
-    }
-    
-    //SINGLETON
-    public static KremlinWorker getInstance(){
-        if(russianDos==null){
-            russianDos = new KremlinWorker();
-        }
-        return russianDos;
+//Guardar Milicia
+public class KremlinWorker implements Rusia{
+    public static Edificio edif = new Edificio();
+    public Bunker bunk;//Aca guardo la milicia
+    public static Edificio getInstance(){
+        return edif;
     }
     @Override
     public void crearEdificacion() {
-        russian.setNombreEdificacion("Kremlin");
+        edif.setNombre("Kremlin");
+        edif.setVida(650);
+        edif.setCantxTurno(3);
+        edif.setCantidad(10);
+        edif.setCapacidad(5000);
     }
 
     @Override
-    public void darVida() {
-        KremlinWorker variable = getInstance();
-        this.setVida(variable.getVida());
+    public Edificio getEdificio() {
+        return null;
     }
 
     @Override
-    public void obtenerDineroRecursos() {
-        russian.setRecursos(1, 1);//1 oro y 1 bronce
+    public Bunker getBunker() {
+        return this.bunk;
     }
 
     @Override
-    public void tomarElementos() {
-        russian.setElementos("Guardar Milicia");
+    public CentroMando getCentroMando() {
+        return null;
     }
 
     @Override
-    public Edificacion getEdificacion() {
-        return this.russian;
+    public Cochera getCochera() {
+        return null;
     }
+    
 }

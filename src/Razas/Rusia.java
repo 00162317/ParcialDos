@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Interface;
-import Clases.*;
+package Razas;
 
 /**
  *
  * @author Roberto
  */
-public interface Datos {
-    public void crearRaza();
-    public void crearCentroMando();//????
-    public Raza getRaza();
+public interface Rusia {
+    public void crearEdificacion();
+    public Edificio getEdificio();
+    public Bunker getBunker();
+    public CentroMando getCentroMando();
+    public Cochera getCochera();
 }

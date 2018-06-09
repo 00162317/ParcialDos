@@ -3,31 +3,32 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EdificacionUSA;
+package EdificacionAlemania;
 
+import Razas.Alemania;
 import Razas.Bunker;
 import Razas.CentroMando;
 import Razas.Cochera;
 import Razas.Edificio;
-import Razas.Usa;
 
 /**
  *
  * @author Roberto
  */
-//Guardar Monedas
-public class GranCanionWorker implements Usa{
-    public static Edificio edif = new Edificio();
+//Centro de mando
+public class MuroBerlinWorker implements Alemania{
+    public static Edificio edif = new Edificio();//Instaciando
+    private CentroMando centro;
     public static Edificio getInstance(){
         return edif;
     }
     @Override
     public void crearEdificacion() {
-        edif.setNombre("Gran cañon");
-        edif.setVida(650);
+        edif.setNombre("Muro Berlin");
+        edif.setVida(800);
+        edif.setCapacidad(10000);//Son los recursos, la onda de 5000 y 3000
         edif.setCantidad(10);//Cantidad de recursos
-        edif.setCantxTurno(3);
-        edif.setCapacidad(3000);//La onda de recursos
+        edif.setCantxTurno(2);
     }
 
     @Override
@@ -42,7 +43,7 @@ public class GranCanionWorker implements Usa{
 
     @Override
     public CentroMando getCentroMando() {
-        return null;
+        return this.centro;
     }
 
     @Override

@@ -15,19 +15,19 @@ import Razas.Usa;
  *
  * @author Roberto
  */
-//Guardar Monedas
-public class GranCanionWorker implements Usa{
+//Guardar Billetes
+public class GoldeStateWorker implements Usa{
     public static Edificio edif = new Edificio();
     public static Edificio getInstance(){
         return edif;
     }
     @Override
     public void crearEdificacion() {
-        edif.setNombre("Gran cañon");
-        edif.setVida(650);
+        edif.setNombre("Golden State ");
+        edif.setVida(700);
         edif.setCantidad(10);//Cantidad de recursos
         edif.setCantxTurno(3);
-        edif.setCapacidad(3000);//La onda de recursos
+        edif.setCapacidad(10000);//La onda de recursos
     }
 
     @Override

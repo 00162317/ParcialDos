@@ -5,51 +5,50 @@
  */
 package EdificacionesRusia;
 
+import Razas.Bunker;
+import Razas.CentroMando;
+import Razas.Cochera;
+import Razas.Edificio;
+import Razas.Rusia;
+
 /**
  *
  * @author Roberto
  */
-public class VolgogradoWorker implements Datos {
-    private Edificacion russian;
-    public static VolgogradoWorker russianDos;
-    private int vida= 900;
-
-    public int getVida() {
-        return vida;
-    }
-
-    public void setVida(int vida) {
-        this.vida = vida;
-    }
-    public static VolgogradoWorker getInstance(){
-        if(russianDos==null){
-            russianDos = new VolgogradoWorker();
-        }
-        return russianDos;
+//Guardar Centro de Mando
+public class VolgogradoWorker implements Rusia{
+    public static Edificio edif = new Edificio();
+    private CentroMando centro;
+    public static Edificio getInstance(){
+        return edif;
     }
     @Override
     public void crearEdificacion() {
-        russian.setNombreEdificacion("Volgogrado");
+        edif.setNombre("Volgogrado");
+        edif.setVida(900);
+        edif.setCantxTurno(3);
+        edif.setCantidad(10);
+        edif.setCapacidad(10000);
     }
 
     @Override
-    public void darVida() {
-        VolgogradoWorker variable = getInstance();
+    public Edificio getEdificio() {
+        return null;
     }
 
     @Override
-    public void obtenerDineroRecursos() {
-        russian.setRecursos(1, 1);//1 oro y 1 oro
+    public Bunker getBunker() {
+        return null;
     }
 
     @Override
-    public void tomarElementos() {
-        russian.setElementos("Centro de mando");
+    public CentroMando getCentroMando() {
+        return this.centro;
     }
 
     @Override
-    public Edificacion getEdificacion() {
-        return this.russian;
+    public Cochera getCochera() {
+        return null;
     }
     
 }

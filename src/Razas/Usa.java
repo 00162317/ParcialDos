@@ -9,8 +9,11 @@ package Razas;
  *
  * @author Roberto
  */
-public interface Datos {
-    public void crearRaza();
-    public void crearCentroMando();//????
-    public Raza getRaza();
+public interface Usa {
+    public void crearEdificacion();//De los recursos
+    public Edificio getEdificio();
+    public Bunker getBunker();
+    public CentroMando getCentroMando();
+    public Cochera getCochera();
+    
 }

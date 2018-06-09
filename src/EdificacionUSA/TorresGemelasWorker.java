@@ -5,55 +5,50 @@
  */
 package EdificacionUSA;
 
-import static EdificacionUSA.GoldenStateWorker.getInstance;
+import Razas.Bunker;
+import Razas.CentroMando;
+import Razas.Cochera;
+import Razas.Edificio;
+import Razas.Usa;
 
 /**
  *
  * @author Roberto
  */
-public class TorresGemelasWorker implements Datos{
-    private Edificacion unaited;
-    public static TorresGemelasWorker unaitedDos;
-    private int vida= 800;
-    public static TorresGemelasWorker getInstance(){
-        if(unaitedDos==null){
-            unaitedDos = new TorresGemelasWorker();
-        }
-        return unaitedDos;
+//Centro de mando
+public class TorresGemelasWorker implements Usa{
+    public static Edificio edif = new Edificio();
+    private CentroMando centro;
+    public static Edificio getInstance(){
+        return edif;
     }
-
-    public int getVida() {
-        return vida;
-    }
-
-    public void setVida(int vida) {
-        this.vida = vida;
-    }
-
     @Override
     public void crearEdificacion() {
-        unaited.setNombre("Torres Gemelas");
+        edif.setNombre("Torres Gemelas ");
+        edif.setVida(800);
+        edif.setCantidad(10);//Cantidad de recursos
+        edif.setCantxTurno(3);
+        edif.setCapacidad(10000);//La onda de recursos
     }
 
     @Override
-    public void darVida() {
-        TorresGemelasWorker variable = getInstance();
-        this.setVida(variable.getVida());
+    public Edificio getEdificio() {
+        return null;
     }
 
     @Override
-    public void obtenerDineroRecursos() {
-        unaited.setRecursos(1, 1);//1 billete y 1 plata
+    public Bunker getBunker() {
+        return null;
     }
 
     @Override
-    public void tomarElementos() {
-        unaited.setElementos("Centro de mando");
+    public CentroMando getCentroMando() {
+        return this.centro;
     }
 
     @Override
-    public Edificacion getEdificacion() {
-        return this.unaited;
+    public Cochera getCochera() {
+        return null;
     }
     
 }

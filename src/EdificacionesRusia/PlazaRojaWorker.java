@@ -5,54 +5,52 @@
  */
 package EdificacionesRusia;
 
+import Razas.Bunker;
+import Razas.CentroMando;
+import Razas.Cochera;
+import Razas.Edificio;
+import Razas.Rusia;
+
 /**
  *
  * @author Roberto
  */
-public class PlazaRojaWorker implements Datos{
-    private Edificacion russian;
-    private static PlazaRojaWorker russianDos;
-    private int vida = 600;
+//Guardar Camionetas
 
-    public int getVida() {
-        return vida;
-    }
-
-    public void setVida(int vida) {
-        this.vida = vida;
-    }
-    
-    //SINGLETON
-    public static PlazaRojaWorker getInstance(){
-        if(russianDos==null){
-            russianDos= new PlazaRojaWorker();
-        }
-        return russianDos;
+public class PlazaRojaWorker implements Rusia{
+    public static Edificio edif = new Edificio();
+    private Cochera carros;
+    public static Edificio getInstance(){
+        return edif;
     }
     @Override
     public void crearEdificacion() {
-        russian.setNombreEdificacion("Plaza Roja");
+        edif.setNombre("Plaza Roja");
+        edif.setVida(600);
+        edif.setCantxTurno(3);
+        edif.setCantidad(10);
+        edif.setCapacidad(5000);
     }
 
     @Override
-    public void darVida() {
-        PlazaRojaWorker variable = getInstance();
-        this.setVida(variable.getVida());
+    public Edificio getEdificio() {
+        return null;
     }
 
     @Override
-    public void obtenerDineroRecursos() {
-        russian.setRecursos(1, 1);//1 oro y 1 plata
+    public Bunker getBunker() {
+        return null;
     }
 
     @Override
-    public void tomarElementos() {
-        russian.setElementos("Guardar Camionetas");
+    public CentroMando getCentroMando() {
+        return null;
     }
 
     @Override
-    public Edificacion getEdificacion() {
-        return this.russian;
+    public Cochera getCochera() {
+        return this.carros;
     }
     
 }
+

@@ -5,53 +5,49 @@
  */
 package EdificacionesRusia;
 
+import Razas.Bunker;
+import Razas.CentroMando;
+import Razas.Cochera;
+import Razas.Edificio;
+import Razas.Rusia;
+
 /**
  *
  * @author Roberto
  */
-public class ElbrusWorker implements Datos{
-    private Edificacion russian;
-    public static ElbrusWorker russianDos;
-    private int vida = 700 ;
-    public static ElbrusWorker getInstance(){
-        if(russianDos==null){
-            russianDos=new ElbrusWorker();
-        }
-        return russianDos;
+//Guarda Bronce
+public class ElbrusWorker implements Rusia{
+    public static Edificio edif = new Edificio();
+    public static Edificio getInstance(){
+        return edif;
     }
-
-    public int getVida() {
-        return vida;
-    }
-
-    public void setVida(int vida) {
-        this.vida = vida;
-    }
-
     @Override
     public void crearEdificacion() {
-        russian.setNombreEdificacion("Elbrus");
+        edif.setNombre("Elbrus");
+        edif.setVida(700);
+        edif.setCantxTurno(3);
+        edif.setCantidad(10);
+        edif.setCapacidad(10000);
     }
 
     @Override
-    public void darVida() {
-        ElbrusWorker variable = getInstance();
-        this.setVida(variable.getVida());
+    public Edificio getEdificio() {
+        return null;
     }
 
     @Override
-    public void obtenerDineroRecursos() {
-        russian.setRecursos(1, 1);//1 oro y 1 plata
+    public Bunker getBunker() {
+        return null;
     }
 
     @Override
-    public void tomarElementos() {
-        russian.setElementos("Guardar Bronce");
+    public CentroMando getCentroMando() {
+        return null;
     }
 
     @Override
-    public Edificacion getEdificacion() {
-        return this.russian;
+    public Cochera getCochera() {
+        return null;
     }
     
 }

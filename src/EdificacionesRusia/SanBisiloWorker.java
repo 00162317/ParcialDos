@@ -5,50 +5,51 @@
  */
 package EdificacionesRusia;
 
+import Razas.Bunker;
+import Razas.CentroMando;
+import Razas.Cochera;
+import Razas.Edificio;
+import Razas.Rusia;
+
 /**
  *
  * @author Roberto
  */
-public class SanBisiloWorker implements Datos{
-    private Edificacion russian;
-    private int vida = 700;
-    public static SanBisiloWorker russianDos;
-    public int getVida(){
-        return vida;
-    }
-    public void setVida(int vida){
-        this.vida=vida;
-    }
-    public static SanBisiloWorker getInstance(){
-        if(russianDos==null){
-            russianDos=new SanBisiloWorker();
-        }
-        return russianDos;
+//Guardar jets
+public class SanBisiloWorker implements Rusia{
+    public static Edificio edif = new Edificio();
+    private Cochera carros;
+    public static Edificio getInstance(){
+        return edif;
     }
     @Override
     public void crearEdificacion() {
-        russian.setNombreEdificacion("San Bisilo");
+        edif.setNombre("San Bisilo");
+        edif.setVida(700);
+        edif.setCantxTurno(3);
+        edif.setCantidad(10);
+        edif.setCapacidad(10000);
+
     }
 
     @Override
-    public void darVida() {
-        SanBisiloWorker variable = getInstance();
-        this.setVida(variable.getVida());
+    public Edificio getEdificio() {
+        return null;
     }
 
     @Override
-    public void obtenerDineroRecursos() {
-        russian.setRecursos(1, 1); //1 de oro y 1 de oro
+    public Bunker getBunker() {
+        return null;
     }
 
     @Override
-    public void tomarElementos() {
-        russian.setElementos("Guardar Jets");
+    public CentroMando getCentroMando() {
+        return null;
     }
 
     @Override
-    public Edificacion getEdificacion() {
-        return this.russian;
+    public Cochera getCochera() {
+        return this.carros;
     }
     
 }

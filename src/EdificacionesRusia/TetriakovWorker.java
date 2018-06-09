@@ -5,53 +5,49 @@
  */
 package EdificacionesRusia;
 
+import Razas.Bunker;
+import Razas.CentroMando;
+import Razas.Cochera;
+import Razas.Edificio;
+import Razas.Rusia;
+
 /**
  *
  * @author Roberto
  */
-public class TetriakovWorker implements Datos{
-    private Edificacion russian;
-    public static TetriakovWorker russianDos;
-    private int vida = 650;
-    public static TetriakovWorker getInstance(){
-        if(russianDos==null){
-            russianDos=new TetriakovWorker();
-        }
-        return russianDos;
+//Guardar Plata
+public class TetriakovWorker implements Rusia{
+    public static Edificio edif = new Edificio();
+    public static Edificio getInstance(){
+        return edif;
     }
-
-    public int getVida() {
-        return vida;
-    }
-
-    public void setVida(int vida) {
-        this.vida = vida;
-    }
-
     @Override
     public void crearEdificacion() {
-        russian.setNombreEdificacion("Tetrakiov");
+        edif.setNombre("Tetriakov");
+        edif.setVida(650);
+        edif.setCantxTurno(3);
+        edif.setCantidad(10);
+        edif.setCapacidad(3000);
     }
 
     @Override
-    public void darVida() {
-        TetriakovWorker variable = getInstance();
-        this.setVida(variable.getVida());
+    public Edificio getEdificio() {
+        return null;
     }
 
     @Override
-    public void obtenerDineroRecursos() {
-        russian.setRecursos(1, 1);//1 oro y 1 bronce
+    public Bunker getBunker() {
+        return null;
     }
 
     @Override
-    public void tomarElementos() {
-        russian.setElementos("Guardar Plata");
+    public CentroMando getCentroMando() {
+        return null;
     }
 
     @Override
-    public Edificacion getEdificacion() {
-        return this.russian;
+    public Cochera getCochera() {
+        return null;
     }
     
 }

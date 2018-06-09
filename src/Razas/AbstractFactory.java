@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Interface;
+package Razas;
 
 /**
  *
  * @author Roberto
  */
-public interface RazasPlan {
-    public void setNombreRaza(String nombre);
-    public void setDescripcionRaza(String descripcion);
+public interface AbstractFactory {
+    Usa getUsa(String type);
+    Rusia getRusia(String type);
+    Alemania getAlemania(String type);
 }

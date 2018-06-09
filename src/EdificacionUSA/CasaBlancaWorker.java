@@ -5,53 +5,50 @@
  */
 package EdificacionUSA;
 
+import Razas.Bunker;
+import Razas.CentroMando;
+import Razas.Cochera;
+import Razas.Edificio;
+import Razas.Usa;
+
 /**
  *
  * @author Roberto
  */
-public class CasaBlancaWorker implements Datos {
-private Edificacion unaited;
-    public static CasaBlancaWorker unaitedDos;
-    private int vida= 700;
-    public static CasaBlancaWorker getInstance(){
-        if(unaitedDos==null){
-            unaitedDos = new CasaBlancaWorker();
-        }
-        return unaitedDos;
+//Guardar trailers
+public class CasaBlancaWorker implements Usa{
+    public static Edificio edif = new Edificio();
+    private Cochera carros;
+    public static Edificio getInstance(){
+        return edif;
     }
-
-    public int getVida() {
-        return vida;
-    }
-
-    public void setVida(int vida) {
-        this.vida = vida;
-    }
-    
     @Override
     public void crearEdificacion() {
-        unaited.setNombre("Casa Blanca");
+        edif.setNombre("Casa Blanca ");
+        edif.setVida(700);
+        edif.setCantidad(10);//Cantidad de recursos
+        edif.setCantxTurno(3);
+        edif.setCapacidad(10000);//La onda de recursos
     }
 
     @Override
-    public void darVida() {
-        CasaBlancaWorker variable = getInstance();
-        this.setVida(variable.getVida());
+    public Edificio getEdificio() {
+        return null;
     }
 
     @Override
-    public void obtenerDineroRecursos() {
-        unaited.setRecursos(1, 1);//1 billete y 1 moneda
+    public Bunker getBunker() {
+        return null;
     }
 
     @Override
-    public void tomarElementos() {
-        unaited.setElementos("Trailer Furgon");
+    public CentroMando getCentroMando() {
+        return null;
     }
 
     @Override
-    public Edificacion getEdificacion() {
-        return this.unaited;
+    public Cochera getCochera() {
+        return this.carros;
     }
     
 }

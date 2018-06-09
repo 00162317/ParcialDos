@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EdificacionesAlemania;
+package Razas;
 
 /**
  *
  * @author Roberto
  */
-public interface Datos {
+public interface Alemania {
     public void crearEdificacion();
-    public void darVida();
-    public void obtenerDineroRecursos();
-    public void tomarElementos();
-    public Edificacion getEdificacion();
+    public Edificio getEdificio();
+    public Bunker getBunker();
+    public CentroMando getCentroMando();
+    public Cochera getCochera();
 }

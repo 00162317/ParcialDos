@@ -5,53 +5,50 @@
  */
 package EdificacionUSA;
 
+import Razas.Bunker;
+import Razas.CentroMando;
+import Razas.Cochera;
+import Razas.Edificio;
+import Razas.Usa;
+
 /**
  *
  * @author Roberto
  */
-public class EstatuaLibertadWorker implements Datos {
-    private Edificacion unaited;
-    public static EstatuaLibertadWorker unaitedDos;
-    private int vida= 750;
-    public static EstatuaLibertadWorker getInstance(){
-        if(unaitedDos==null){
-            unaitedDos = new EstatuaLibertadWorker();
-        }
-        return unaitedDos;
+//Guardar Motos
+public class EstatuaLibertadWorker implements Usa{
+    public static Edificio edif = new Edificio();
+    private Cochera carros;
+    public static Edificio getInstance(){
+        return edif;
     }
-
-    public int getVida() {
-        return vida;
-    }
-
-    public void setVida(int vida) {
-        this.vida = vida;
-    }
-    
     @Override
     public void crearEdificacion() {
-        unaited.setNombre("Estatua Libertad");
+        edif.setNombre("Estatua Libertad ");
+        edif.setVida(750);
+        edif.setCantidad(10);//Cantidad de recursos
+        edif.setCantxTurno(3);
+        edif.setCapacidad(5000);//La onda de recursos
     }
 
     @Override
-    public void darVida() {
-        EstatuaLibertadWorker variable = getInstance();
-        this.setVida(variable.getVida());
+    public Edificio getEdificio() {
+        return null;
     }
 
     @Override
-    public void obtenerDineroRecursos() {
-        unaited.setRecursos(1, 1);//1 billete y 1 billete
+    public Bunker getBunker() {
+        return null;
     }
 
     @Override
-    public void tomarElementos() {
-        unaited.setElementos("Guardar Motos");
+    public CentroMando getCentroMando() {
+        return null;
     }
 
     @Override
-    public Edificacion getEdificacion() {
-        return this.unaited;
+    public Cochera getCochera() {
+        return this.carros;
     }
     
 }

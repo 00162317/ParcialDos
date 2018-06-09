@@ -5,53 +5,49 @@
  */
 package EdificacionesRusia;
 
+import Razas.Bunker;
+import Razas.CentroMando;
+import Razas.Cochera;
+import Razas.Edificio;
+import Razas.Rusia;
+
 /**
  *
  * @author Roberto
  */
-public class KijiWorker implements Datos{
-    private Edificacion russian;
-    public static KijiWorker russianDos;
-    private int vida = 500;
-
-    public int getVida() {
-        return vida;
-    }
-
-    public void setVida(int vida) {
-        this.vida = vida;
-    }
-    public static KijiWorker getInstance(){
-        if(russianDos==null){
-            russianDos = new KijiWorker();
-        }
-        return russianDos;
+//Guardar ORO
+public class KijiWorker implements Rusia{
+    public static Edificio edif = new Edificio();
+    public static Edificio getInstance(){
+        return edif;
     }
     @Override
     public void crearEdificacion() {
-        russian.setNombreEdificacion("Kiji");
+        edif.setNombre("Kiji");
+        edif.setVida(500);
+        edif.setCantxTurno(3);
+        edif.setCantidad(10);
+        edif.setCapacidad(5000);
     }
 
     @Override
-    public void darVida() {
-        KijiWorker variable = getInstance();
-        this.setVida(variable.getVida());
+    public Edificio getEdificio() {
+        return null;
     }
 
     @Override
-    public void obtenerDineroRecursos() {
-        russian.setRecursos(1, 1);//1 plata y 1 bronce
+    public Bunker getBunker() {
+        return null;
     }
 
     @Override
-    public void tomarElementos() {
-        russian.setElementos("Guardar Oro");
+    public CentroMando getCentroMando() {
+        return null;
     }
 
     @Override
-    public Edificacion getEdificacion() {
-        return this.russian;
-        
+    public Cochera getCochera() {
+        return null;
     }
     
 }
