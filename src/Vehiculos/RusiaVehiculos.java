@@ -11,6 +11,6 @@ package Vehiculos;
  */
 public interface RusiaVehiculos {
     public void crearVehiculo();
-    public Camioneta getCamioneta();
-    public JetHydra getJetHydra();
+    public VehiculoBase getCamioneta();
+    public VehiculoBase getJetHydra();
 }

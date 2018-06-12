@@ -12,8 +12,8 @@ import Milicia.*;
  * @author Roberto
  */
 public class RevolucionariosWorker implements RusiaMilicia{
-    public static Revolucionarios tropa = new Revolucionarios();
-    public static Revolucionarios getInstance(){
+    public static MiliciaBase tropa = new MiliciaBase();
+    public static MiliciaBase getInstance(){
         return tropa;
     }
     @Override
@@ -25,12 +25,12 @@ public class RevolucionariosWorker implements RusiaMilicia{
     }
 
     @Override
-    public Revolucionarios getRevolucionarios() {
+    public MiliciaBase getRevolucionarios() {
         return this.tropa;
     }
 
     @Override
-    public TenientePutin getTenientePutin() {
+    public MiliciaBase getTenientePutin() {
         return null;
     }
     

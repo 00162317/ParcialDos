@@ -12,8 +12,8 @@ import Milicia.*;
  * @author Roberto
  */
 public class FBIworker implements UsaMilicia{
-    public static FBI tropa = new FBI();
-    public static FBI getInstance(){
+    public static MiliciaBase tropa = new MiliciaBase();
+    public static MiliciaBase getInstance(){
         return tropa;
     }
     @Override
@@ -25,12 +25,12 @@ public class FBIworker implements UsaMilicia{
     }
 
     @Override
-    public FBI getFBI() {
+    public MiliciaBase getFBI() {
         return this.tropa;
     }
 
     @Override
-    public DonaldTrump getDonaldTrump() {
+    public MiliciaBase getDonaldTrump() {
         return null;
     }
     

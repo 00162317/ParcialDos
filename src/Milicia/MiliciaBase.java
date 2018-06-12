@@ -5,18 +5,16 @@
  */
 package Milicia;
 
-
 import java.util.ArrayList;
 
 /**
  *
  * @author Roberto
  */
-
-public class DonaldTrump implements MiliciaPlan {
+public class MiliciaBase implements MiliciaPlan{
     private String nombre;
-    private int dinero,dineroDos,ataque,vida;
-     public ArrayList<DonaldTrump> lista = new ArrayList<>();
+    private int dinero, dineroDos, ataque, vida;
+     public ArrayList<MiliciaBase> lista = new ArrayList<>();
     @Override
     public void setNombre(String nombre) {
         this.nombre=nombre;

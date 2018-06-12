@@ -4,16 +4,15 @@
  * and open the template in the editor.
  */
 package VehiculosAlemania;
-import Vehiculos.Tanque;
 import Vehiculos.AlemaniaVehiculos;
-import Vehiculos.Bus;
+import Vehiculos.*;
 /**
  *
  * @author Roberto
  */
 public class TanqueWorker implements AlemaniaVehiculos {
-    public static Tanque vehiculo = new Tanque();
-    public static Tanque getInstance(){
+    public static VehiculoBase vehiculo = new VehiculoBase();
+    public static VehiculoBase getInstance(){
         return vehiculo;
     }
     @Override
@@ -27,12 +26,12 @@ public class TanqueWorker implements AlemaniaVehiculos {
     }
 
     @Override
-    public Tanque getTanque() {
+    public VehiculoBase getTanque() {
         return this.vehiculo;
     }
 
     @Override
-    public Bus getBus() {
+    public VehiculoBase getBus() {
         return null;
     }
     

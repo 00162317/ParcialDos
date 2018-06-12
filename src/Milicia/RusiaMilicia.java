@@ -11,6 +11,6 @@ package Milicia;
  */
 public interface RusiaMilicia {
     public void crearMilicia();
-    public Revolucionarios getRevolucionarios();
-    public TenientePutin getTenientePutin();
+    public MiliciaBase getRevolucionarios();
+    public MiliciaBase getTenientePutin();
 }

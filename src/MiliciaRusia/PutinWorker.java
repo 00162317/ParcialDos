@@ -12,8 +12,8 @@ import Milicia.*;
  * @author Roberto
  */
 public class PutinWorker implements RusiaMilicia{
-    public static TenientePutin especialista = new TenientePutin();
-    public static TenientePutin getInstance(){
+    public static MiliciaBase especialista = new MiliciaBase();
+    public static MiliciaBase getInstance(){
         return especialista;
     }
     @Override
@@ -25,12 +25,12 @@ public class PutinWorker implements RusiaMilicia{
     }
 
     @Override
-    public Revolucionarios getRevolucionarios() {
+    public MiliciaBase getRevolucionarios() {
         return null;
     }
 
     @Override
-    public TenientePutin getTenientePutin() {
+    public MiliciaBase getTenientePutin() {
         return this.especialista;
     }
     

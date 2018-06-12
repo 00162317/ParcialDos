@@ -13,9 +13,10 @@ import Milicia.*;
  * @author Roberto
  */
 public class BerlinesWorker implements AlemaniaMilicia{
-    public static Berlines tropa = new Berlines();
-    public static Berlines getInstance(){
+    public static MiliciaBase tropa = new MiliciaBase();
+    public static MiliciaBase getInstance(){
         return tropa;
+        
     }
     @Override
     public void crearMilicia() {
@@ -26,12 +27,12 @@ public class BerlinesWorker implements AlemaniaMilicia{
     }
 
     @Override
-    public Berlines getBerlines() {
+    public MiliciaBase getBerlines() {
         return this.tropa;
     }
 
     @Override
-    public Hitler getHitler() {
+    public MiliciaBase getHitler() {
         return null;
     }
     

@@ -11,6 +11,6 @@ package Vehiculos;
  */
 public interface AlemaniaVehiculos {
     public void crearVehiculo();
-    public Tanque getTanque();
-    public Bus getBus();
+    public VehiculoBase getTanque();
+    public VehiculoBase getBus();
 }

@@ -6,16 +6,15 @@
 package VehiculosUSA;
 
 import Vehiculos.UsaVehiculos;
-import Vehiculos.Moto;
-import Vehiculos.Trailer;
-
-/**
+import Vehiculos.VehiculoBase;
+        
+        /**
  *
  * @author Roberto
  */
 public class TrailerWorker implements UsaVehiculos{
-    public static Trailer vehiculo = new Trailer();
-    public static Trailer getInstance(){
+    public static VehiculoBase vehiculo = new VehiculoBase();
+    public static VehiculoBase getInstance(){
         return vehiculo;
     }
     @Override
@@ -29,12 +28,12 @@ public class TrailerWorker implements UsaVehiculos{
     }
 
     @Override
-    public Moto getMoto() {
+    public VehiculoBase getMoto() {
         return null;
     }
 
     @Override
-    public Trailer getTrailer() {
+    public VehiculoBase getTrailer() {
         return this.vehiculo;
     }
     

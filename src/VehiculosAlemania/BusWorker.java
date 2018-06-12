@@ -6,8 +6,7 @@
 package VehiculosAlemania;
 
 import Vehiculos.AlemaniaVehiculos;
-import Vehiculos.Bus;
-import Vehiculos.Tanque;
+import Vehiculos.*;
 
 /**
  *
@@ -15,8 +14,8 @@ import Vehiculos.Tanque;
  */
 
 public class BusWorker implements AlemaniaVehiculos {
-    public static Bus vehiculo = new Bus();
-    public static Bus getInstance(){
+    public static VehiculoBase vehiculo = new VehiculoBase();
+    public static VehiculoBase getInstance(){
         return vehiculo;
     }
     @Override
@@ -30,12 +29,12 @@ public class BusWorker implements AlemaniaVehiculos {
     }
 
     @Override
-    public Tanque getTanque() {
+    public VehiculoBase getTanque() {
         return null;
     }
 
     @Override
-    public Bus getBus() {
+    public VehiculoBase getBus() {
         return this.vehiculo;
     }
     

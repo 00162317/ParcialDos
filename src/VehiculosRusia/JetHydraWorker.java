@@ -4,16 +4,15 @@
  * and open the template in the editor.
  */
 package VehiculosRusia;
-import Vehiculos.JetHydra;
-import Vehiculos.Camioneta;
 import Vehiculos.RusiaVehiculos;
+import Vehiculos.*;
 /**
  *
  * @author Roberto
  */
 public class JetHydraWorker implements RusiaVehiculos{
-    public static JetHydra vehiculo = new JetHydra();
-    public static JetHydra getInstance(){
+    public static VehiculoBase vehiculo = new VehiculoBase();
+    public static VehiculoBase getInstance(){
         return vehiculo;
     }
     @Override
@@ -27,12 +26,12 @@ public class JetHydraWorker implements RusiaVehiculos{
     }
 
     @Override
-    public Camioneta getCamioneta() {
+    public VehiculoBase getCamioneta() {
         return null;
     }
 
     @Override
-    public JetHydra getJetHydra() {
+    public VehiculoBase getJetHydra() {
         return vehiculo;
     }
     

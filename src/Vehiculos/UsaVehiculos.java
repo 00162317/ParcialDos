@@ -11,6 +11,6 @@ package Vehiculos;
  */
 public interface UsaVehiculos {
     public void crearVehiculo();
-    public Moto getMoto();
-    public Trailer getTrailer();
+    public VehiculoBase getMoto();
+    public VehiculoBase getTrailer();
 }

@@ -12,8 +12,8 @@ import Milicia.*;
  * @author Roberto
  */
 public class DonadlTrumpWorker implements UsaMilicia{
-    public static DonaldTrump especialista = new DonaldTrump();
-    public static DonaldTrump getInstance(){
+    public static MiliciaBase especialista = new MiliciaBase();
+    public static MiliciaBase getInstance(){
         return especialista;
     }
     @Override
@@ -25,12 +25,12 @@ public class DonadlTrumpWorker implements UsaMilicia{
     }
 
     @Override
-    public FBI getFBI() {
+    public MiliciaBase getFBI() {
         return null;
     }
 
     @Override
-    public DonaldTrump getDonaldTrump() {
+    public MiliciaBase getDonaldTrump() {
         return this.especialista;
     }
     

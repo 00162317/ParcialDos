@@ -11,6 +11,6 @@ package Milicia;
  */
 public interface AlemaniaMilicia {
     public void crearMilicia();
-    public Berlines getBerlines();
-    public Hitler getHitler();
+    public MiliciaBase getBerlines();
+    public MiliciaBase getHitler();
 }

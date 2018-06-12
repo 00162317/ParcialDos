@@ -11,6 +11,6 @@ package Milicia;
  */
 public interface UsaMilicia {
     public void crearMilicia();
-    public FBI getFBI();
-    public DonaldTrump getDonaldTrump();
+    public MiliciaBase getFBI();
+    public MiliciaBase getDonaldTrump();
 }

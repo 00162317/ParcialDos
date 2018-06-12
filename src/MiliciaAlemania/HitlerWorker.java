@@ -13,8 +13,8 @@ import Milicia.*;
  * @author Roberto
  */
 public class HitlerWorker implements AlemaniaMilicia{
-    public static Hitler especialista = new Hitler();
-    public static Hitler getInstance(){
+    public static MiliciaBase especialista = new MiliciaBase();
+    public static MiliciaBase getInstance(){
         return especialista;
     }
     @Override
@@ -26,12 +26,12 @@ public class HitlerWorker implements AlemaniaMilicia{
     }
 
     @Override
-    public Berlines getBerlines() {
+    public MiliciaBase getBerlines() {
         return null;
     }
 
     @Override
-    public Hitler getHitler() {
+    public MiliciaBase getHitler() {
         return this.especialista;
     }
     

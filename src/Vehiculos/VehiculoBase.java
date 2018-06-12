@@ -3,8 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Milicia;
-
+package Vehiculos;
 
 import java.util.ArrayList;
 
@@ -13,13 +12,18 @@ import java.util.ArrayList;
  * @author Roberto
  */
 
-public class Hitler implements MiliciaPlan {
+public class VehiculoBase implements VehiculosPlan{
     private String nombre;
-    private int dinero,dineroDos,ataque,vida;
-     public ArrayList<Hitler> lista = new ArrayList<>();
+    private int vida, dinero,dineroDos,ataque,hacer,llegada;
+    public ArrayList<VehiculoBase> lista = new ArrayList<>();
     @Override
     public void setNombre(String nombre) {
         this.nombre=nombre;
+    }
+
+    @Override
+    public void setVida(int vida) {
+        this.vida=vida;
     }
 
     @Override
@@ -34,13 +38,23 @@ public class Hitler implements MiliciaPlan {
     }
 
     @Override
-    public void setVida(int vida) {
-        this.vida=vida;
+    public void setTiempoHacer(int hacer) {
+        this.hacer=hacer;
+    }
+
+    @Override
+    public void setTiempoLlegada(int llegada) {
+        this.llegada=llegada;
     }
 
     @Override
     public String getNombre() {
         return this.nombre;
+    }
+
+    @Override
+    public int getVida() {
+        return this.vida;
     }
 
     @Override
@@ -54,8 +68,13 @@ public class Hitler implements MiliciaPlan {
     }
 
     @Override
-    public int getVida() {
-        return this.vida;
+    public int getTiempoHacer() {
+        return this.hacer;
+    }
+
+    @Override
+    public int getTiempoLlegada() {
+        return this.llegada;
     }
     
 }
