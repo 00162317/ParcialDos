@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 import Vehiculos.VehiculoBase;
 import Jugador.*;
+import Menu.MenuPrincipal;
+import Menu.Turnos;
 
 /**
  *
@@ -19,8 +21,14 @@ public class RobertoHernandezWorld {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+       
         // TODO code application logic here
-        /*FactoryAlemania alemania = new FactoryAlemania();
+        Turnos turno = Turnos.getInstance();
+        turno.run();
+        /*
+         MenuPrincipal menus = new MenuPrincipal();
+        menus.MenuUno();
+        FactoryAlemania alemania = new FactoryAlemania();
         FactoryUSA unaited = new FactoryUSA();
         FactoryRusia russian = new FactoryRusia();
         /////////////////////////////////////////////////
@@ -35,10 +43,10 @@ public class RobertoHernandezWorld {
         //////////////////////////////////////////////////////
         System.out.println("Edificacion: "+edifBase.edif.get(0).getNombre());
         System.out.println("Edificacion: "+edifBase.edif.get(1).getNombre());
-        */
+        
         PlayerUno user = PlayerUno.getInstance();
-        user.guardarEdificios(1, 1);
-       System.out.println(user.edificioBase.get(0).getNombre());
+        user.guardarEdificios(1);
+       System.out.println(user.edificioBase.get(0).getNombre());*/
     }
     
 }

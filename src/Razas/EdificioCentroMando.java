@@ -5,6 +5,8 @@
  */
 package Razas;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Roberto
@@ -13,7 +15,7 @@ package Razas;
 public class EdificioCentroMando implements EdificioCentroMandoPlan{
     public String nombre, raza;
     public int vida, capacidad1, capacidad2, capacidad3;
-
+    public ArrayList<EdificioCentroMando> edificioCentroMando = new ArrayList<>();
     @Override
     public void setNombre(String nombre) {
         this.nombre = nombre;

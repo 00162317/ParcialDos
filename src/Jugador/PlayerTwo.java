@@ -8,18 +8,19 @@ package Jugador;
 import EdificacionAlemania.FactoryAlemania;
 import EdificacionRusia.FactoryRusia;
 import EdificacionUSA.FactoryUSA;
-import Razas.*;
+import Razas.EdificioBase;
+import Razas.EdificioCentroMando;
+import Razas.EdificioEntrenar;
+import Razas.EdificioVehiculo;
 import java.util.ArrayList;
-///import Vehiculos.*;
-//import Milicia.*;
 
 /**
  *
  * @author Roberto
  */
-public class PlayerUno {
+public class PlayerTwo {
     //Razas.AbstractFactory raza;
-    private static PlayerUno usuario = new PlayerUno();
+    private static PlayerTwo usuario = new PlayerTwo();
     private int raza;
     FactoryAlemania germani = new FactoryAlemania();
     FactoryRusia russian = new FactoryRusia();
@@ -32,15 +33,16 @@ public class PlayerUno {
         this.raza = raza;
     }
     
-    public static PlayerUno getInstance(){
+    public static PlayerTwo getInstance(){
         if(usuario==null){
-            usuario=new PlayerUno();
+            usuario=new PlayerTwo();
         }
         return usuario;
     }
     public ArrayList<EdificioBase> edificioBase = new ArrayList<>();
     public ArrayList<EdificioEntrenar> edificioEntrenar = new ArrayList<>();
     public ArrayList<EdificioVehiculo> edificioVehiculo = new ArrayList<>();
+    public ArrayList<EdificioCentroMando> edificioCentroMando = new ArrayList<>();
 
     public ArrayList<EdificioCentroMando> getEdificioCentroMando() {
         return edificioCentroMando;
@@ -49,7 +51,6 @@ public class PlayerUno {
     public void setEdificioCentroMando(ArrayList<EdificioCentroMando> edificioCentroMando) {
         this.edificioCentroMando = edificioCentroMando;
     }
-    public ArrayList<EdificioCentroMando> edificioCentroMando = new ArrayList<>();
 
     public ArrayList<EdificioBase> getEdificioBase() {
         return edificioBase;
@@ -79,44 +80,17 @@ public class PlayerUno {
         
         switch(usuario.getRaza()){
             case 1:
-                        /*
-                    1.Bemberg
-                    2.Brenderburgo
-                    3.Dresde
-                    4.Europa Park
-                    5.Hamburgo
-                    6.Munich
-                    7.Muro Berlin
-                    */
                 germani.getAlemaniaRaza(edificio).crearEdificacionRecursos();
                 EdificioBase recurso = germani.getAlemaniaRaza(edificio).getInstance();
-                recurso.edificio.add(recurso);
+                //recurso.edificio.add(recurso);
                 usuario.getEdificioBase().add(recurso);
                 break;
             case 2:
-                    /*
-                    1.Elbrus
-                    2.Kiji
-                    3.Kremlin
-                    4.Plaza Roja
-                    5.San Bisilo
-                    6.Tetriakov
-                    7.Volgogrado
-                    */
                 russian.getRusiaRaza(edificio).crearEdificacionRecursos();
                 EdificioBase recurso1 = russian.getRusiaRaza(edificio).getInstance();
                 //recurso1.edificio.add(recurso1);
                 usuario.getEdificioBase().add(recurso1);
             case 3:
-                    /*
-                    1.DisneyLand
-                    2.Casa Blanca
-                    3.EmpireState
-                    4.Estatua Libertad
-                    5.Golden State
-                    6.Gran Canion
-                    7.Torres Gemelas
-                    */
                 unaited.getUsaRaza(edificio).crearEdificacionRecursos();
                 EdificioBase recurso2 = unaited.getUsaRaza(edificio).getInstance();
                 //recurso2.edificio.add(recurso2);
@@ -156,29 +130,30 @@ public class PlayerUno {
                 //entrenar1.edificioEntrenamiento.add(entrenar1);
                 usuario.getEdificioEntrenar().add(entrenar1);
             case 3:
-                unaited.getUsaRaza(edificio).crearEdificacionEntrenamiento();
-                EdificioEntrenar entrenar2 = russian.getUsaRaza(edificio).getInstance3();
+                unaited.getRusiaRaza(edificio).crearEdificacionEntrenamiento();
+                EdificioEntrenar entrenar2 = russian.getRusiaRaza(edificio).getInstance3();
                 //entrenar2.edificioEntrenamiento.add(entrenar2);
                 usuario.getEdificioEntrenar().add(entrenar2);
         }
         
     }
+    
     public void guardarCentroMando(int edificio){
         switch(usuario.getRaza()){
             case 1:
                 germani.getAlemaniaRaza(edificio).crearCentroMando();
                 EdificioCentroMando centroMando = germani.getAlemaniaRaza(edificio).getInstance2();
-                //centroMando.edificioCentroMando.add(centroMando);
+                //centroMando.edificio.add(centroMando);
                 usuario.getEdificioCentroMando().add(centroMando);
             case 2:
                 russian.getRusiaRaza(edificio).crearCentroMando();
                 EdificioCentroMando centroMando1 = russian.getRusiaRaza(edificio).getInstance2();
-                //centroMando1.edificioCentroMando.add(centroMando1);
+                //centroMando1.edificio.add(centroMando1);
                 usuario.getEdificioCentroMando().add(centroMando1);
             case 3:
                 unaited.getUsaRaza(edificio).crearCentroMando();
                 EdificioCentroMando centroMando2 = unaited.getUsaRaza(edificio).getInstance2();
-                //centroMando2.edificioCentroMando.add(centroMando2);
+                //centroMando2.edificio.add(centroMando2);
                 usuario.getEdificioCentroMando().add(centroMando2);
         }
     }
