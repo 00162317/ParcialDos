@@ -4,19 +4,17 @@
  * and open the template in the editor.
  */
 package EdificacionUSA;
-
-import Razas.AbstractFactory;
-import Razas.Alemania;
-import Razas.Rusia;
-import Razas.Usa;
+import Razas.*;
 
 /**
  *
  * @author Roberto
  */
-public class FactoryUSA implements AbstractFactory{
+public class FactoryUSA implements AbstractFactoryRaza{
 
-    /*
+    @Override
+    public UsaRaza getUsaRaza(int opcion) {
+         /*
     1.DisneyLand
     2.Casa Blanca
     3.EmpireState
@@ -25,34 +23,32 @@ public class FactoryUSA implements AbstractFactory{
     6.Gran Canion
     7.Torres Gemelas
     */
-    @Override
-    public Usa getUsa(int algo) {
-        switch(algo){
-            case 1:
-                return new DisneyLandWorker();
-            case 2:
-                return new CasaBlancaWorker();
-            case 3:
-                return new EmpireStateWorker();
-            case 4:
-                return new EstatuaLibertadWorker();
-            case 5:
-                return new GoldeStateWorker();
-            case 6:
-                return new GranCanionWorker();
-            case 7:
-                return new TorresGemelasWorker();
-        }
+         switch(opcion){
+             case 1:
+                 return new DisneyLandRecursoTres();
+             case 2:
+                  return new CasaBlancaVehiculoDos();
+             case 3:
+                  return new EmpireStateMilicia();
+             case 4:
+                  return new EstatuaLibertadVehiculoUno();
+             case 5:
+                  return new GoldenStateRecursoUno();
+             case 6:
+                  return new GranCanionRecursoDos();
+             case 7:
+                  return new TorresGemelasCentroMando();
+         }
         return null;
     }
 
     @Override
-    public Rusia getRusia(int algo) {
+    public RusiaRaza getRusiaRaza(int opcion) {
         return null;
     }
 
     @Override
-    public Alemania getAlemania(int algo) {
+    public AlemaniaRaza getAlemaniaRaza(int opcion) {
         return null;
     }
     

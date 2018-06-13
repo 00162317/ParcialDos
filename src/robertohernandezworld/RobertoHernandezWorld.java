@@ -1,10 +1,13 @@
 
 package robertohernandezworld;
 
-import EdificacionAlemania.*;
-import EdificacionUSA.*;
-import EdificacionesRusia.*;
-import Razas.*;
+
+import Milicia.MiliciaBase;
+import java.util.Scanner;
+import java.util.ArrayList;
+
+import Vehiculos.VehiculoBase;
+import Jugador.*;
 
 /**
  *
@@ -17,7 +20,7 @@ public class RobertoHernandezWorld {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        FactoryAlemania alemania = new FactoryAlemania();
+        /*FactoryAlemania alemania = new FactoryAlemania();
         FactoryUSA unaited = new FactoryUSA();
         FactoryRusia russian = new FactoryRusia();
         /////////////////////////////////////////////////
@@ -32,7 +35,10 @@ public class RobertoHernandezWorld {
         //////////////////////////////////////////////////////
         System.out.println("Edificacion: "+edifBase.edif.get(0).getNombre());
         System.out.println("Edificacion: "+edifBase.edif.get(1).getNombre());
-        
+        */
+        PlayerUno user = PlayerUno.getInstance();
+        user.guardarEdificios(1, 1);
+       System.out.println(user.edificioBase.get(0).getNombre());
     }
     
 }

@@ -5,29 +5,26 @@
  */
 package EdificacionAlemania;
 
-import Razas.AbstractFactory;
-import Razas.Alemania;
-import Razas.Rusia;
-import Razas.Usa;
+import Razas.*;
 
 /**
  *
  * @author Roberto
  */
-public class FactoryAlemania implements AbstractFactory{
+public class FactoryAlemania implements AbstractFactoryRaza{
 
     @Override
-    public Usa getUsa(int algo) {
+    public UsaRaza getUsaRaza(int opcion) {
         return null;
     }
 
     @Override
-    public Rusia getRusia(int algo) {
+    public RusiaRaza getRusiaRaza(int opcion) {
         return null;
     }
 
     @Override
-    public Alemania getAlemania(int algo) {
+    public AlemaniaRaza getAlemaniaRaza(int opcion) {
         /*
         1.Bemberg
         2.Brenderburgo
@@ -37,21 +34,21 @@ public class FactoryAlemania implements AbstractFactory{
         6.Munich
         7.Muro Berlin
         */
-        switch(algo){
+        switch(opcion){
             case 1:
-                return new BembergWorker();
+                return new BemberRecursoTres();
             case 2:
-                return new BrenderburgoWorker();
+                return new BrenderburgoMilicia();
             case 3:
-                return new DresdeWorker();
+                return new DresdeRecursoUno();
             case 4:
-                return new EuropaParkWorker();
+                return new EuropaParkRecursoDos();
             case 5:
-                return new HamburgoWorker();
+                return new HamburgoVehiculoDos();
             case 6:
-                return new MunichWorker();
+                return new MunichVehiculoUno();
             case 7:
-                return new MuroBerlinWorker();
+                return new MuroBerlinCentroMando();
         }
         return null;
     }
