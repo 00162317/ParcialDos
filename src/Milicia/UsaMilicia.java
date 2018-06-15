@@ -13,4 +13,5 @@ public interface UsaMilicia {
     public void crearMilicia();
     public MiliciaBase getFBI();
     public MiliciaBase getDonaldTrump();
+    public MiliciaBase getInstance2();
 }

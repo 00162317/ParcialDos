@@ -37,6 +37,11 @@ public class BusWorker implements AlemaniaVehiculos {
     public VehiculoBase getBus() {
         return this.vehiculo;
     }
+
+    @Override
+    public VehiculoBase getInstance2() {
+        return null;
+    }
     
 }
 

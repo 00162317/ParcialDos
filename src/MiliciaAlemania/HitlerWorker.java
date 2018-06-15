@@ -23,6 +23,7 @@ public class HitlerWorker implements AlemaniaMilicia{
         especialista.setVida(30);
         especialista.setPrecio(1, 1);//diamante y gema
         especialista.setAtaque(95);
+        especialista.setTiempo(2);
     }
 
     @Override
@@ -33,6 +34,11 @@ public class HitlerWorker implements AlemaniaMilicia{
     @Override
     public MiliciaBase getHitler() {
         return this.especialista;
+    }
+
+    @Override
+    public MiliciaBase getInstance2() {
+        return null;
     }
     
 }

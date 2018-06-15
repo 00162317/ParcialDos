@@ -26,6 +26,7 @@ public class GranCanionRecursoDos implements UsaRaza{
         edificio.setMontoActual(3000);
         edificio.setVida(650);
         edificio.setCapacidad(10000);
+        edificio.setTiempo(1);
     }
 
     @Override

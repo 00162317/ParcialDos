@@ -34,5 +34,10 @@ public class TanqueWorker implements AlemaniaVehiculos {
     public VehiculoBase getBus() {
         return null;
     }
+
+    @Override
+    public VehiculoBase getInstance2() {
+        return null;
+    }
     
 }

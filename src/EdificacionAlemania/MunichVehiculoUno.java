@@ -29,6 +29,7 @@ public class MunichVehiculoUno implements AlemaniaRaza {
         vehiculos.setTipo("Tanque");
         vehiculos.setValor1(5000, 1);//recurso y valor
         vehiculos.setValor2(5000, 1);
+        vehiculos.setTiempo(3);
     }
     @Override
     public void crearEdificacionRecursos() {

@@ -23,6 +23,7 @@ public class JetHydraWorker implements RusiaVehiculos{
         vehiculo.setPrecio(1, 1);//Oro y oro
         vehiculo.setTiempoHacer(0);
         vehiculo.setTiempoLlegada(0);
+        vehiculo.setTiempo(1);
     }
 
     @Override
@@ -33,6 +34,11 @@ public class JetHydraWorker implements RusiaVehiculos{
     @Override
     public VehiculoBase getJetHydra() {
         return vehiculo;
+    }
+
+    @Override
+    public VehiculoBase getInstance2() {
+        return null;
     }
     
 }

@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 import Vehiculos.VehiculoBase;
 import Jugador.*;
-import Menu.MenuPrincipal;
-import Menu.Turnos;
+
+import Menu.MenuRoberto;
 
 /**
  *
@@ -21,32 +21,12 @@ public class RobertoHernandezWorld {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       
-        // TODO code application logic here
-        Turnos turno = Turnos.getInstance();
-        turno.run();
-        /*
-         MenuPrincipal menus = new MenuPrincipal();
-        menus.MenuUno();
-        FactoryAlemania alemania = new FactoryAlemania();
-        FactoryUSA unaited = new FactoryUSA();
-        FactoryRusia russian = new FactoryRusia();
-        /////////////////////////////////////////////////
-        alemania.getAlemania(1).crearEdificacion();
-        unaited.getUsa(2).crearEdificacion();
-        russian.getRusia(3).crearEdificacion();
-        //////////////////////////////////////////////////
-        Edificio edifBase = BembergWorker.getInstance();
-        edifBase.edif.add(edifBase);
-        Edificio edifUsa = CasaBlancaWorker.getInstance();
-        edifBase.edif.add(edifUsa);
-        //////////////////////////////////////////////////////
-        System.out.println("Edificacion: "+edifBase.edif.get(0).getNombre());
-        System.out.println("Edificacion: "+edifBase.edif.get(1).getNombre());
+  
+       MenuRoberto menusito = new MenuRoberto();
+        menusito.Menu();
+        menusito.partida();
         
-        PlayerUno user = PlayerUno.getInstance();
-        user.guardarEdificios(1);
-       System.out.println(user.edificioBase.get(0).getNombre());*/
+ 
     }
     
 }

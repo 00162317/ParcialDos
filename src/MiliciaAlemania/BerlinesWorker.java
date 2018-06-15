@@ -24,6 +24,7 @@ public class BerlinesWorker implements AlemaniaMilicia{
         tropa.setVida(40);
         tropa.setPrecio(1, 1);//diamante y carbon
         tropa.setAtaque(90);
+        tropa.setTiempo(1);
     }
 
     @Override
@@ -34,6 +35,11 @@ public class BerlinesWorker implements AlemaniaMilicia{
     @Override
     public MiliciaBase getHitler() {
         return null;
+    }
+
+    @Override
+    public MiliciaBase getInstance2() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

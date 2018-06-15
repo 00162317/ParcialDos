@@ -31,6 +31,7 @@ public class KremlinMilicia implements RusiaRaza{
         edificio.setVida(650);
         edificio.setCosto1(2, 200);
         edificio.setCosto2(3, 300);
+        edificio.setTiempo(3);
     }
 
     @Override

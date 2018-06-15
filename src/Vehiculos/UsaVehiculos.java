@@ -13,4 +13,5 @@ public interface UsaVehiculos {
     public void crearVehiculo();
     public VehiculoBase getMoto();
     public VehiculoBase getTrailer();
+    public VehiculoBase getInstance2();
 }

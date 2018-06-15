@@ -26,6 +26,7 @@ public class TetriakovRecursoDos implements RusiaRaza{
         edificio.setMontoActual(1000);
         edificio.setVida(650);
         edificio.setCapacidad(10000);
+        edificio.setTiempo(2);
     }
 
     @Override

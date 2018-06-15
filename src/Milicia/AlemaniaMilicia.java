@@ -13,4 +13,5 @@ public interface AlemaniaMilicia {
     public void crearMilicia();
     public MiliciaBase getBerlines();
     public MiliciaBase getHitler();
+    public MiliciaBase getInstance2();
 }

@@ -30,6 +30,7 @@ public class EuropaParkRecursoDos implements AlemaniaRaza {
         edificio.setMontoActual(1000);
         edificio.setVida(600);
         edificio.setCapacidad(3000);
+        edificio.setTiempo(1);
     }
 
     @Override

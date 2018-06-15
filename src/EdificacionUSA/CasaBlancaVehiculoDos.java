@@ -63,6 +63,7 @@ public class CasaBlancaVehiculoDos implements UsaRaza{
         vehiculos.setTipo("Trailer");
         vehiculos.setValor1(3000, 1);//recurso y valor
         vehiculos.setValor2(3000, 1);
+        vehiculos.setTiempo(2);
     }
     
 }

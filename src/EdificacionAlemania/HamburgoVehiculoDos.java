@@ -5,6 +5,7 @@
  */
 package EdificacionAlemania;
 
+import static EdificacionRusia.ElbrusRecursoTres.edificio;
 import Razas.AlemaniaRaza;
 import Razas.EdificioBase;
 import Razas.EdificioCentroMando;
@@ -62,6 +63,7 @@ public class HamburgoVehiculoDos implements AlemaniaRaza {
         vehiculos.setTipo("Bus");
         vehiculos.setValor1(3000, 1);//recurso y valor
         vehiculos.setValor2(5000, 1);
+        vehiculos.setTiempo(1);
     }
     
 }

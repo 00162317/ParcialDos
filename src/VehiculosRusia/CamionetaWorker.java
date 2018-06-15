@@ -23,6 +23,7 @@ public class CamionetaWorker implements RusiaVehiculos{
         vehiculo.setPrecio(1, 1);//Oro y bronce
         vehiculo.setTiempoHacer(0);
         vehiculo.setTiempoLlegada(0);
+        vehiculo.setTiempo(2);
     }
 
     @Override
@@ -32,6 +33,11 @@ public class CamionetaWorker implements RusiaVehiculos{
 
     @Override
     public VehiculoBase getJetHydra() {
+        return null;
+    }
+
+    @Override
+    public VehiculoBase getInstance2() {
         return null;
     }
     

@@ -62,6 +62,7 @@ public class PlazaRojaVehiculoUno implements RusiaRaza{
         vehiculos.setTipo("Camioneta");
         vehiculos.setValor1(10000, 1);//recurso y valor
         vehiculos.setValor2(3000, 1);
+        vehiculos.setTiempo(1);
     }
     
 }

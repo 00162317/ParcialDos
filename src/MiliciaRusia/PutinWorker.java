@@ -22,6 +22,7 @@ public class PutinWorker implements RusiaMilicia{
         especialista.setVida(75);
         especialista.setPrecio(1, 1);//oror y oro 
         especialista.setAtaque(125);
+        especialista.setTiempo(1);
     }
 
     @Override
@@ -32,6 +33,11 @@ public class PutinWorker implements RusiaMilicia{
     @Override
     public MiliciaBase getTenientePutin() {
         return this.especialista;
+    }
+
+    @Override
+    public MiliciaBase getInstance2() {
+        return null;
     }
     
 }

@@ -62,6 +62,7 @@ public class EstatuaLibertadVehiculoUno implements UsaRaza{
         vehiculos.setTipo("Moto");
         vehiculos.setValor1(5000, 1);//recurso y valor
         vehiculos.setValor2(3000, 1);
+        vehiculos.setTiempo(1);
     }
     
 }

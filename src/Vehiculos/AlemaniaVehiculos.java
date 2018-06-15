@@ -13,4 +13,5 @@ public interface AlemaniaVehiculos {
     public void crearVehiculo();
     public VehiculoBase getTanque();
     public VehiculoBase getBus();
+    public VehiculoBase getInstance2();
 }

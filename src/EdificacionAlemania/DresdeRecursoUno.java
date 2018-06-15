@@ -31,6 +31,7 @@ public class DresdeRecursoUno implements AlemaniaRaza {
         edificio.setMontoActual(1000);
         edificio.setVida(600);
         edificio.setCapacidad(5000);
+        edificio.setTiempo(3);
     }
 
     @Override

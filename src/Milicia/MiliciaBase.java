@@ -13,9 +13,18 @@ import java.util.ArrayList;
  */
 public class MiliciaBase implements MiliciaPlan{
     private String nombre;
-    private int dinero, dineroDos, ataque, vida;
+    private int dinero, dineroDos, ataque, vida, tiempo;
      public ArrayList<MiliciaBase> lista = new ArrayList<>();
-    @Override
+
+    public int getTiempo() {
+        return tiempo;
+    }
+
+    public void setTiempo(int tiempo) {
+        this.tiempo = tiempo;
+    }
+    
+     @Override
     public void setNombre(String nombre) {
         this.nombre=nombre;
     }

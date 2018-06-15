@@ -22,6 +22,7 @@ public class RevolucionariosWorker implements RusiaMilicia{
         tropa.setVida(50);
         tropa.setPrecio(1, 1);//oror y plata
         tropa.setAtaque(80);
+        tropa.setTiempo(1);
     }
 
     @Override
@@ -31,6 +32,11 @@ public class RevolucionariosWorker implements RusiaMilicia{
 
     @Override
     public MiliciaBase getTenientePutin() {
+        return null;
+    }
+
+    @Override
+    public MiliciaBase getInstance2() {
         return null;
     }
     

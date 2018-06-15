@@ -35,6 +35,7 @@ public class VolgogradoCentroMando implements RusiaRaza{
         edificio.setCapacidad1(10000);
         edificio.setCapacidad2(5000);
         edificio.setCapacidad2(5000);
+        
     }
 
     @Override

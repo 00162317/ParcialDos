@@ -63,6 +63,7 @@ public static EdificioVehiculo vehiculos = new EdificioVehiculo();
         vehiculos.setTipo("Jets");
         vehiculos.setValor1(10000, 1);//recurso y valor
         vehiculos.setValor2(5000, 1);
+        vehiculos.setTiempo(2);
     }
     
 }

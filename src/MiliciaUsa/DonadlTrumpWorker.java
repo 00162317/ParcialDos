@@ -22,6 +22,7 @@ public class DonadlTrumpWorker implements UsaMilicia{
         especialista.setVida(40);
         especialista.setPrecio(1, 1);//billete y rupia
         especialista.setAtaque(75);
+        especialista.setTiempo(2);
     }
 
     @Override
@@ -32,6 +33,11 @@ public class DonadlTrumpWorker implements UsaMilicia{
     @Override
     public MiliciaBase getDonaldTrump() {
         return this.especialista;
+    }
+
+    @Override
+    public MiliciaBase getInstance2() {
+        return null;
     }
     
 }

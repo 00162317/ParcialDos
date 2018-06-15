@@ -27,6 +27,7 @@ public class BemberRecursoTres implements AlemaniaRaza {
         edificio.setMontoActual(1000);
         edificio.setVida(700);
         edificio.setCapacidad(10000);
+        edificio.setTiempo(1);
     }
     @Override
     public void crearEdificacionVehiculo() {

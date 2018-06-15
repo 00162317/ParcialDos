@@ -13,4 +13,5 @@ public interface RusiaVehiculos {
     public void crearVehiculo();
     public VehiculoBase getCamioneta();
     public VehiculoBase getJetHydra();
+    public VehiculoBase getInstance2();
 }

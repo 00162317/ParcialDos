@@ -13,4 +13,5 @@ public interface RusiaMilicia {
     public void crearMilicia();
     public MiliciaBase getRevolucionarios();
     public MiliciaBase getTenientePutin();
+    public MiliciaBase getInstance2();
 }

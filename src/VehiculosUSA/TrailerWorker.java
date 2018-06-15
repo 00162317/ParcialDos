@@ -25,6 +25,7 @@ public class TrailerWorker implements UsaVehiculos{
         vehiculo.setPrecio(1, 1);//Moneda y rupia
         vehiculo.setTiempoHacer(0);
         vehiculo.setTiempoLlegada(0);
+        vehiculo.setTiempo(2);
     }
 
     @Override
@@ -35,6 +36,11 @@ public class TrailerWorker implements UsaVehiculos{
     @Override
     public VehiculoBase getTrailer() {
         return this.vehiculo;
+    }
+
+    @Override
+    public VehiculoBase getInstance2() {
+        return null;
     }
     
 }

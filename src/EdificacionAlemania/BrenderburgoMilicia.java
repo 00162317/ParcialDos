@@ -30,6 +30,7 @@ public class BrenderburgoMilicia implements AlemaniaRaza {
         edificio.setVida(600);
         edificio.setCosto1(2, 200);
         edificio.setCosto2(3, 300);
+        edificio.setTiempo(2);
     }
 
     @Override

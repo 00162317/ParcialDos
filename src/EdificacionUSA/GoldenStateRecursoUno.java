@@ -26,6 +26,7 @@ public class GoldenStateRecursoUno implements UsaRaza{
         edificio.setMontoActual(3000);
         edificio.setVida(700);
         edificio.setCapacidad(10000);
+        edificio.setTiempo(2);
     }
 
     @Override

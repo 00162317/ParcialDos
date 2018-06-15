@@ -22,6 +22,7 @@ public class FBIworker implements UsaMilicia{
         tropa.setVida(40);
         tropa.setPrecio(1, 1);//billete y moneda
         tropa.setAtaque(80);
+        tropa.setTiempo(1);
     }
 
     @Override
@@ -31,6 +32,11 @@ public class FBIworker implements UsaMilicia{
 
     @Override
     public MiliciaBase getDonaldTrump() {
+        return null;
+    }
+
+    @Override
+    public MiliciaBase getInstance2() {
         return null;
     }
     

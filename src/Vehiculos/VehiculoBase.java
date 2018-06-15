@@ -14,8 +14,17 @@ import java.util.ArrayList;
 
 public class VehiculoBase implements VehiculosPlan{
     private String nombre;
-    private int vida, dinero,dineroDos,ataque,hacer,llegada;
+    private int vida, dinero,dineroDos,ataque,hacer,llegada,tiempo;
     public ArrayList<VehiculoBase> lista = new ArrayList<>();
+
+    public int getTiempo() {
+        return tiempo;
+    }
+
+    public void setTiempo(int tiempo) {
+        this.tiempo = tiempo;
+    }
+    
     @Override
     public void setNombre(String nombre) {
         this.nombre=nombre;
